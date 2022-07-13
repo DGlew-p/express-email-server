@@ -1,0 +1,22 @@
+{
+  "name": "express-email-server",
+  "version": "1.0.0",
+  "description": " mail srever to handle contact form email",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "http-proxy-middleware": "^2.0.3",
+    "node-fetch": "^3.2.2",
+    "nodemailer": "^6.7.2"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "darren glew",
+  "license": "ISC"
+}
