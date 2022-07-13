@@ -1,7 +1,7 @@
 {
   "name": "express-email-server",
   "version": "1.0.0",
-  "description": " mail srever to handle contact form email",
+  "description": " mail server to handle contact form email",
   "main": "index.js",
   "engines": {
     "node": "14.x"
