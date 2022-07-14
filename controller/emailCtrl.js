@@ -16,12 +16,11 @@ transporter.verify((error, success) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("Trans success");
+    console.log("transporter success");
   }
 });
 
 async function create(req, res) {
-  console.log("create controler");
   try {
     const name = req.body.name;
     const email = req.body.email;
@@ -34,9 +33,8 @@ async function create(req, res) {
       { name: name, email: email, message: message },
       function (err, data) {
         if (err) {
-          console.log("rendeer file" + err);
+          console.log("render file" + err);
         } else {
-          console.log("mailoptions");
           var mailOptions = {
             from: email,
             to: process.env.USER,
@@ -47,7 +45,7 @@ async function create(req, res) {
 
           transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
-              console.log(err + " snedMail Err");
+              console.log(err + " sendMail Err");
               res.status(500).send({
                 success: false,
               });
