@@ -47,10 +47,12 @@ async function create(req, res) {
 
           transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
+              console.log(err + " snedMail Err");
               res.status(500).send({
                 success: false,
               });
             } else {
+              console.log("sendMail");
               res.send({
                 success: true,
               });
