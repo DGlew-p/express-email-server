@@ -21,6 +21,7 @@ transporter.verify((error, success) => {
 });
 
 async function create(req, res) {
+  console.log("create controler");
   try {
     const name = req.body.name;
     const email = req.body.email;
