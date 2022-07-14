@@ -46,6 +46,7 @@ async function create(req, res) {
 
           transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
+              console.log(err.info);
               res.status(500).send({
                 success: false,
               });
