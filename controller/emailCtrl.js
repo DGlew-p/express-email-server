@@ -34,8 +34,9 @@ async function create(req, res) {
       { name: name, email: email, message: message },
       function (err, data) {
         if (err) {
-          console.log(error);
+          console.log("rendeer file" + err);
         } else {
+          console.log("mailoptions");
           var mailOptions = {
             from: email,
             to: process.env.USER,
@@ -46,7 +47,6 @@ async function create(req, res) {
 
           transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
-              console.log(err.info);
               res.status(500).send({
                 success: false,
               });
